@@ -1,0 +1,9 @@
+1.搜索页面加
+  $(document).keydown(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    $("#searchForm").submit();
+                };
+            });
+2. 首页删除 <label class="title-icon">></label>中的>
+3.商品详情中 已收藏加上class add

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group ci">
+        <div class="page page-current">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <h1 class="title">信用账户</h1>
+            </header>
+            <div class="content infinite-scroll" data-distance="20">
+                <div class="account-block">
+                    <div class="label">信用账户可用额度</div>
+                    <div class="mount">12050.00</div>
+                    <div class="status">账户状态：正常</div>
+                    <div class="date">账单日 12月1号   &nbsp;&nbsp;最后还款日 12月10日</div>
+                </div>
+                <div class="content-block-title">我的信用账单</div>
+                <div class="buttons-tab">
+                    <a href="#" class="tab-link active button external">全部</a>
+                    <a href="#" class="tab-link button external">未还款</a>
+                    <a href="#" class="tab-link button external">已结清</a>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><a href="" class="button pay-btn">还款</a></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><a href="" class="button pay-btn">还款</a></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><a href="" class="button pay-btn">还款</a></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><span class="paid">已结清</span></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><span class="paid">已结清</span></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><span class="paid">已结清</span></div>
+                            </div>
+                        </li>
+                        <li class="item-inner bill-item">
+                            <div class="item-row">
+                                <div class="item-title bill-date">2016年11月</div>
+                                <div class="item-after bill-mount">653.10</div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-title pay-date">还款日：2016-11-20 <span class="pay-label">分3期</span></div>
+                                <div class="item-after"><span class="paid">已结清</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infinite-scroll-preloader">
+                  <div class="preloader-label">继续拖动，查看更多</div>
+                  <div class="preloader"></div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/sm.min.js"></script>
+    <script type="text/javascript">
+        $.init();
+        $(function (){
+            // 加载flag
+            var loading = false;
+            // 最多可加载的条目
+            var maxItems = 100;
+
+            // 每次加载添加多少条目
+            var itemsPerLoad = 20;
+
+            // 上次加载的序号
+            var lastIndex = 20;
+
+            // 注册'infinite'事件处理函数
+            $(document).on('infinite', '.infinite-scroll',function() {
+
+                // 如果正在加载，则退出
+                if (loading) return;
+                $(".preloader-label").hide();
+                $(".preloader").css({"display": "inline-block"});
+                // 设置flag
+                loading = true;
+
+                $.get("card-ajax.html", function (data){
+                    loading = false;
+                    $(".preloader-label").show();
+                    $(".preloader").hide();
+                    if(lastIndex >= maxItems) {
+                      // 加载完毕，则注销无限加载事件，以防不必要的加载
+                      $.detachInfiniteScroll($('.infinite-scroll'));
+                      // 删除加载提示符
+                      $('.infinite-scroll-preloader').remove();
+                      return;
+                    }
+
+                    // 添加新条目
+                    $('.infinite-scroll .list-block ul').append(data);
+                    // 更新最后加载的序号
+                    lastIndex = $('.infinite-scroll .list-block li').length;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

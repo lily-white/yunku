@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group dept">
+        <div class="page page-current">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <h1 class="title">云库白条</h1>
+            </header>
+            <div class="content infinite-scroll">
+                <div class="info">
+                    <div class="mount-label">白条可用额度</div>
+                    <div class="mount">2556.00</div>
+                    <div class="info-tabs">
+                        <div class="tab-item">
+                            <div class="tab-label">白条总额度</div>
+                            <div class="tab-mount">3000.00</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-label">待付服务费</div>
+                            <div class="tab-mount">0.00</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-label">待付违约金</div>
+                            <div class="tab-mount">0.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons-tab">
+                    <a href="order_detail.html" class="button external active">未出账单</a>
+                    <a href="#" class="button external">已出账单</a>
+                </div>
+                <div class="dept-list" data-distance="20">
+                    <div class="dept-item">
+                        <div class="item-row">
+                            <div class="item-title">账单待付款</div>
+                            <div class="mount">0.00 <span class="status">（已结清）</span></div>
+                        </div>
+                        <div class="item-row">
+                            <div>账单日期 2016-10-20</div>
+                            <div>消费金额 300.00</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="button view-btn">查看账单</a>
+                            <a href="#" class="button view-btn">分期明细</a>
+                        </div>
+                    </div>
+                    <div class="dept-item">
+                        <div class="item-row">
+                            <div class="item-title">账单待付款</div>
+                            <div class="mount">0.00 <span class="status">（已结清）</span></div>
+                        </div>
+                        <div class="item-row">
+                            <div>账单日期 2016-10-20</div>
+                            <div>消费金额 300.00</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="button view-btn">查看账单</a>
+                            <a href="#" class="button view-btn">分期明细</a>
+                            <a href="#" class="button pay-btn">立即还款</a>
+                        </div>
+                    </div>
+                    <div class="dept-item">
+                        <div class="item-row">
+                            <div class="item-title">账单待付款</div>
+                            <div class="mount">0.00 <span class="status">（已结清）</span></div>
+                        </div>
+                        <div class="item-row">
+                            <div>账单日期 2016-10-20</div>
+                            <div>消费金额 300.00</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="button view-btn">查看账单</a>
+                            <a href="#" class="button view-btn">分期明细</a>
+                        </div>
+                    </div>
+                    <div class="dept-item">
+                        <div class="item-row">
+                            <div class="item-title">账单待付款</div>
+                            <div class="mount">0.00 <span class="status">（已结清）</span></div>
+                        </div>
+                        <div class="item-row">
+                            <div>账单日期 2016-10-20</div>
+                            <div>消费金额 300.00</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="button view-btn">查看账单</a>
+                            <a href="#" class="button view-btn">分期明细</a>
+                        </div>
+                    </div>
+                    <div class="dept-item">
+                        <div class="item-row">
+                            <div class="item-title">账单待付款</div>
+                            <div class="mount">0.00 <span class="status">（已结清）</span></div>
+                        </div>
+                        <div class="item-row">
+                            <div>账单日期 2016-10-20</div>
+                            <div>消费金额 300.00</div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="#" class="button view-btn">查看账单</a>
+                            <a href="#" class="button view-btn">分期明细</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="infinite-scroll-preloader">
+                  <div class="preloader"></div>
+                </div>
+            </div>
+        </div> 
+        <div class="popup-overlay close-popup"></div>
+        <div class="popup popup-dept" >
+          <div class="content-block credit-detail">
+            <div class="popup-title">确认支付</div>
+            <div class="list">
+                <ul>
+                    <li class="credit-item paid">
+                        <div class="item-row">
+                            <div class="item-title">1/6期</div>
+                            <div class="item-mount">147.03（含违约金8.79）</div>
+                        </div>
+                        <div class="item-row">
+                            <div>还款日  2017-08-10</div>
+                            <div class="status-paid">已还清</div>
+                        </div>
+                    </li>
+                    <li class="credit-item">
+                        <label class="label-checkbox item-content">
+                            <div>
+                                <input type="checkbox" name="my-radio" data-price="10">
+                                <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="checkbox-row">
+                                <div class="item-row">
+                                    <div class="item-title">2/6期</div>
+                                    <div class="item-mount">147.03 <span class="status-overdue">（含违约金8.79）</span></div>
+                                </div>
+                                <div class="item-row">
+                                    <div>还款日  2017-08-10</div>
+                                    <div class="status-overdue">已逾期</div>
+                                </div>
+                            </div>
+                        </label> 
+                    </li>
+                    <li class="credit-item">
+                        <label class="label-checkbox item-content">
+                            <div>
+                                <input type="checkbox" name="my-radio" data-price="10">
+                                <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="checkbox-row">
+                                <div class="item-row">
+                                    <div class="item-title">3/6期</div>
+                                    <div class="item-mount">147.03</div>
+                                </div>
+                                <div class="item-row">
+                                    <div>还款日  2017-08-10</div>
+                                    <div>剩余应还147.03</div>
+                                </div>
+                            </div>
+                        </label> 
+                    </li>
+                    <li class="credit-item">
+                        <label class="label-checkbox item-content">
+                            <div>
+                                <input type="checkbox" name="my-radio" data-price="10">
+                                <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="checkbox-row">
+                                <div class="item-row">
+                                    <div class="item-title">4/6期</div>
+                                    <div class="item-mount">147.03</div>
+                                </div>
+                                <div class="item-row">
+                                    <div>还款日  2017-08-10</div>
+                                    <div>剩余应还147.03</div>
+                                </div>
+                            </div>
+                        </label> 
+                    </li>
+                    <li class="credit-item">
+                       <label class="label-checkbox item-content">
+                            <div>
+                                <input type="checkbox" name="my-radio" data-price="10">
+                                <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="checkbox-row">
+                                <div class="item-row">
+                                    <div class="item-title">5/6期</div>
+                                    <div class="item-mount">147.03</div>
+                                </div>
+                                <div class="item-row">
+                                    <div>还款日  2017-08-10</div>
+                                    <div>剩余应还147.03</div>
+                                </div>
+                            </div>
+                        </label> 
+                    </li>
+                    <li class="credit-item">
+                        <label class="label-checkbox item-content">
+                            <div>
+                                <input type="checkbox" name="my-radio" data-price="10">
+                                <i class="icon icon-form-checkbox"></i>
+                            </div>
+                            <div class="checkbox-row">
+                                <div class="item-row">
+                                    <div class="item-title">6/6期</div>
+                                    <div class="item-mount">147.03</div>
+                                </div>
+                                <div class="item-row">
+                                    <div>还款日  2017-08-10</div>
+                                    <div>剩余应还147.03</div>
+                                </div>
+                            </div>
+                        </label> 
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-bottom close-popup"><a href="#" class="close-popup"><span class="unit">￥</span><span class="total-mount">3556.00</span> 立即支付</a></div>
+          </div>
+        </div>      
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/sm.min.js"></script>
+    <script type="text/javascript">
+        $.init();
+        $(function (){
+            $(".pay-btn").on("click", function (){
+                $.popup(".popup-dept");
+            });
+            $(".label-checkbox input[type='checkbox']").on("change", function (){
+                var mount = 0;
+                $(".popup-dept input[type='checkbox']:checked").each(function () {
+                    var price = $(this).data("price");
+                    mount += parseFloat(price);    
+                });
+                $(".total-mount").text(mount);
+            });
+
+            // 加载flag
+            var loading = false;
+            // 最多可加载的条目
+            var maxItems = 100;
+
+            // 每次加载添加多少条目
+            var itemsPerLoad = 20;
+
+            // 上次加载的序号
+            var lastIndex = 20;
+
+            // 注册'infinite'事件处理函数
+            $(document).on('infinite', '.infinite-scroll',function() {
+
+                // 如果正在加载，则退出
+                if (loading) return;
+
+                // 设置flag
+                loading = true;
+
+                $.get("order_ajax.html", function (data){
+                    loading = false;
+                    if(lastIndex >= maxItems) {
+                      // 加载完毕，则注销无限加载事件，以防不必要的加载
+                      $.detachInfiniteScroll($('.infinite-scroll'));
+                      // 删除加载提示符
+                      $('.infinite-scroll-preloader').remove();
+                      return;
+                  }
+
+                    // 添加新条目
+                    $('.infinite-scroll .dept-list').append(data);
+                  // 更新最后加载的序号
+                  lastIndex = $('.dept-item').length;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

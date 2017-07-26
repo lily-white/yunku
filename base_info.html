@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group bi">
+        <div class="page page-current">
+        <form action="my.html" id="baseForm">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <a class="icon pull-right">保存</a>
+                <h1 class="title">基本信息</h1>
+            </header>
+            <div class="content">        
+                <div class="list-block fact-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">网店编号：</div>
+                                <div class="item-after"><input type="text" value="12345676" required></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">门店名称：</div>
+                              <div class="item-after"><input type="text" value="惠保无锡直营店铺"></div>
+                            </div>
+                        </li>     
+                        <li class="item-content item-link">
+                            <div class="item-inner">
+                              <div class="item-title">所在地区：</div>
+                              <div class="item-after">
+                                <input type="text" value="北京 海淀区 东北旺乡" id="city-picker">
+                                <input type="hidden" value="CN-11" id="province">
+                                <input type="hidden" value="CN-11-BJ-HT" id="city">
+                                <input type="hidden" value="CN-11-BJ-HT-DBW" id="district">
+                              </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">详细地址：</div>
+                              <div class="item-after"><input type="text" value="测试网点地址"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">联系人：</div>
+                              <div class="item-after"><input type="text" value="张三"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">手机号：</div>
+                              <div class="item-after"><input type="text" value="13300008888"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">银行信息</div>
+                <div class="list-block bank-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">开户账号</div>
+                                <div class="item-after"><input type="text" value=" 12345664874879445"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">开户名称 </div>
+                              <div class="item-after"><input type="text" value="惠保无锡直营店铺"></div>
+                            </div>
+                        </li>     
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">开户银行</div>
+                              <div class="item-after"><input type="text" value="工商银行"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">支付宝账号</div>
+                              <div class="item-after"><input type="text" value="13300000688"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">扫描件</div>
+                <div class="list-block img-block">
+                    <ul>
+                        <li class="item-content img-title">
+                            <div class="item-inner">
+                                <div class="item-title">证件模式：三证合一 </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">三合一证件</div>
+                                <div class="item-after"><img src="images/id.png"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">法人身份证 </div>
+                              <div class="item-after"><img src="images/id.png"></div>
+                            </div>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </form>
+        </div>  
+    </div>
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script> 
+        <script type="text/javascript" src="js/sm.min.js"></script>
+        <script type="text/javascript" src="js/city-picker.min.js"></script>   
+        <script type="text/javascript">
+            $(function (){
+                $(".pull-right").on("click", function (){
+                    $("#baseForm").submit();
+                });
+                $("#city-picker").cityPicker({
+                    toolbarTemplate: '<header class="bar bar-nav">\
+                    <button class="button button-link pull-right close-picker">确定</button>\
+                    <h1 class="title">所在地区</h1>\
+                    </header>',
+                    province: $("#province"),
+                    city: $("#city"),
+                    district: $("#district")
+                });
+                
+            });
+
+        </script>     
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script type="text/javascript">
+            $.noConflict();
+            jQuery("#baseForm").validate();
+        </script>
+       
+   
+</body>
+</html>

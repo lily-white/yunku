@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group am">
+        <div class="page page-current">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <h1 class="title">物流地址管理</h1>
+            </header>
+            <nav class="bar bar-tab bottom-bar">
+                <a class="tab-item external" href="#">
+                    添加新地址
+                </a>
+            </nav>
+            <div class="content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">高伟琳</div>
+                                    <div class="item-after">15801558791</div>
+                                </div>
+                                <div class="item-subtitle">上海 上海市浦东新区张江高科巷南路185路</div>
+                            </div>
+                            <div class="btn-block">
+                                <label class="label-checkbox">
+                                    <input type="checkbox" name="my-radio" class="default-cb">
+                                    <div class="item-media"><i class="icon icon-form-checkbox"></i><span>设为默认</span></div>
+                                </label>
+                                <div>
+                                    <div class="edit-btn">编辑</div>
+                                    <div class="delete-btn">删除</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/sm.min.js"></script>
+        <script type="text/javascript">
+            $(function (){
+                $(".default-cb").on("click", function (){
+                    if($(this).prop("checked")){
+                        //设为默认
+                    }
+                    
+                });
+                $(".edit-btn").on("click", function () {
+                    //编辑
+                });
+                $(".delete-btn").on("click", function () {
+                    //删除
+                });
+            });
+
+        </script>
+    </div>
+  
+</body>
+</html>

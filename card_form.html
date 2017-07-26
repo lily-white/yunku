@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group cardform">
+        <div class="page page-current">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <h1 class="title">标题</h1>
+            </header>
+            <div class="content">
+                <div class="list-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">VIN码：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">车型：</div>
+                            <div class="item-input">
+                              <input type="text" id="panel-btn" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">保养卡：</div>
+                            <div class="item-input">
+                              <input type="text" id="card-input" readonly="">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">车牌号：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">车主姓名：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">手机号：</div>
+                            <div class="item-input">
+                              <input type="tel">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">身份证号：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">地址：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">保证金金额：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                       <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">原保险公司：</div>
+                            <div class="item-input">
+                              <input type="text" id="company-input" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                       <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">上年保费：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">保单到期日：</div>
+                            <div class="item-input">
+                              <input type="text" id="date-input" data-toggle='date' >
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                       <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">备注：</div>
+                            <div class="item-input">
+                              <input type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+                <div class="btn-block">
+                  <a href="#" class="button button-big button-fill">保存</a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-overlay"></div>
+        <div class="panel panel-right panel-cover" id='panel-type'>
+          <div class="content-block vin">
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/sm.min.js"></script>
+    <script type="text/javascript">
+        $.init();
+        $(function (){
+            $("#panel-btn").on("click", function (){
+                $.get("panel-type.html?v=0.2", function (data){
+                    $("#panel-type .content-block").html(data);
+                    $.openPanel("#panel-type");
+                });
+                
+            });
+            $("#card-input").picker({
+                toolbarTemplate: '<header class="bar bar-nav">\
+                <button class="button button-link pull-right close-picker">确定</button>\
+                <h1 class="title">保养卡</h1>\
+                </header>',
+                cols: [
+                    {
+                      textAlign: 'center',
+                      values: ['保养卡', '保养卡1', '保养卡2']
+                    }
+                ]
+                
+            });
+            $("#company-input").picker({
+                toolbarTemplate: '<header class="bar bar-nav">\
+                <button class="button button-link pull-right close-picker">确定</button>\
+                <h1 class="title">原保险公司</h1>\
+                </header>',
+                cols: [
+                    {
+                      textAlign: 'center',
+                      values: ['原保险公司', '原保险公司1', '原保险公司']
+                    }
+                ]
+                
+            });
+        });
+
+    </script>
+</body>
+</html>

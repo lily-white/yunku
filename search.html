@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group search">
+        <div class="page page-current">
+            <!-- 搜索条件 -->
+            <header class="bar bar-nav">
+                <form action="" id="searchForm">
+                <div class="search-block">
+                    <div class="searchbar">
+                        <label class="input-cat">关键字<span class="down-arrow"></span></label>
+                        <ul class="cat-list">
+                            <li class="cat-item" data-key="cat1">关键字</li>
+                            <li class="cat-item" data-key="cat1">VIN</li>
+                            <li class="cat-item" data-key="cat1">OE号</li>
+                            <li class="cat-item" data-key="cat1">商铺</li>
+                        </ul>
+                        <input type="text" id='search' placeholder='请输入名称/品牌/规格型号/车型' class="search-txt" />
+                        <input type="submit" value="搜索" class="search-btn"></input>
+                    </div>
+                    <div class="button-group">
+                        <a href="#" class="button button-round external active panel-btn" data-panel="panel-cat">分类</a>
+                        <a href="#" class="button button-round external panel-btn" data-panel="panel-type">车型</a>
+                        <a href="#" class="button button-round external panel-btn" data-panel="panel-brand">品牌</a>
+                    </div>
+                </div>
+                <div class="condition-block clearfix">
+                    <div class="cond-title">筛选条件：</div>
+                    <ul>
+                        <li class="cond-item" data-cond="1">
+                            <span>前刹车片</span>
+                            <span class="icon-delete"></span>
+                        </li>
+                        <li class="cond-item" data-cond="1">
+                            <span>曼牌</span>
+                            <span class="icon-delete"></span>
+                        </li>
+                        <li class="cond-item" data-cond="1">
+                            <span>滤清器/机油滤清器</span>
+                            <span class="icon-delete"></span>
+                        </li>
+                        <li class="cond-item" data-cond="1">
+                            <span>丰田/凯美瑞/2005款/2.0手自一体</span>
+                            <span class="icon-delete"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sort-block">
+                    <div class="sort-item" data-sort="">
+                        <div class="sort-name">默认</div>
+                        <div class="sort-icon">
+                            <span class="icon icon-sort-asc"></span>
+                            <span class="icon icon-sort-desc"></span>
+                        </div>
+                    </div>
+                    <div class="sort-item asc-on" data-sort="">
+                        <div class="sort-name">销量</div>
+                        <div class="sort-icon">
+                            <span class="icon icon-sort-asc"></span>
+                            <span class="icon icon-sort-desc"></span>
+                        </div>
+                    </div>
+                    <div class="sort-item desc-on" data-sort="">
+                        <div class="sort-name">上架日期</div>
+                        <div class="sort-icon">
+                            <span class="icon icon-sort-asc"></span>
+                            <span class="icon icon-sort-desc"></span>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </header>
+            <!--bar-tab -->
+            <nav class="bar bar-tab">
+                <a class="tab-item external active" href="#">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-card"></span>
+                    <span class="tab-label">保养卡</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-funding"></span>
+                    <span class="tab-label">众筹</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-cart"></span>
+                    <span class="tab-label">购物车</span>
+                    <span class="badge">2</span>
+                </a>
+                <a class="tab-item external" href="#">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我的</span>
+                </a>
+            </nav>
+            <!-- 产品列表 -->
+            <div class="content infinite-scroll" data-distance="100">
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/product-pic.png" class="product-pic">
+                        <div class="product-block">
+                            <div class="product-info">
+                                <div class="product-name">科特宝滤清器CF037（F03）奥迪A4L（B8）Q5  单位：箱</div>
+                                <div class="num-block">
+                                    <div class="product-price"><span class="price-unit">￥</span>98.00</div>
+                                    <div class="num-box" data-role="numStep" data-min="1" >
+                                        <a class="minus-bar disabled">-</a>
+                                        <input class="num-show" data-num="1" type="text" value="1"></input>
+                                        <a class="plus-bar">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-btn"></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product-pic.png" class="product-pic">
+                        <div class="product-block">
+                            <div class="product-info">
+                                <div class="product-name">科特宝滤清器CF037（F03）奥迪A4L（B8）Q5  单位：箱</div>
+                                <div class="num-block">
+                                    <div class="product-price"><span class="price-unit">￥</span>98.00</div>
+                                    <div class="num-box" data-role="numStep" data-min="1" >
+                                        <a class="minus-bar disabled">-</a>
+                                        <input class="num-show" data-num="1" type="text" value="1"></input>
+                                        <a class="plus-bar">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-btn"></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product-pic.png" class="product-pic">
+                        <div class="product-block">
+                            <div class="product-info">
+                                <div class="product-name">科特宝滤清器CF037（F03）奥迪A4L（B8）Q5  单位：箱</div>
+                                <div class="num-block">
+                                    <div class="product-price"><span class="price-unit">￥</span>98.00</div>
+                                    <div class="num-box" data-role="numStep" data-min="1" >
+                                        <a class="minus-bar disabled">-</a>
+                                        <input class="num-show" data-num="1" type="text" value="1"></input>
+                                        <a class="plus-bar">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-btn"></div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product-pic.png" class="product-pic">
+                        <div class="product-block">
+                            <div class="product-info">
+                                <div class="product-name">科特宝滤清器CF037（F03）奥迪A4L（B8）Q5  单位：箱</div>
+                                <div class="num-block">
+                                    <div class="product-price"><span class="price-unit">￥</span>98.00</div>
+                                    <div class="num-box" data-role="numStep" data-min="1" >
+                                        <a class="minus-bar disabled">-</a>
+                                        <input class="num-show" data-num="1" type="text" value="1"></input>
+                                        <a class="plus-bar">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infinite-scroll-preloader">
+                  <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-overlay"></div>
+        <!-- 侧滑分类 -->
+        <div class="panel panel-right panel-cover" id='panel-cat'>
+          <div class="content-block cat">         
+          </div>
+        </div>
+         <!-- 侧滑车型 -->
+        <div class="panel panel-right panel-cover" id='panel-type'>
+          <div class="content-block vin">
+          </div>
+        </div>
+         <!-- 侧滑品牌 -->
+        <div class="panel panel-right panel-cover" id='panel-brand'>
+          <div class="content-block brand">
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/sm.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+    $.init();
+        $(function (){
+            $(document).keydown(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    $("#searchForm").submit();
+                };
+            });
+    
+            $(".content").css({"top": $("header").height()+"px"});
+            $(".input-cat").on("click", function (){
+                $(".cat-list").toggleClass("open");
+            });
+
+            $(".cat-item").on("click", function (){
+                var key = $(this).data("key");
+                $("#searchForm").submit();
+            });
+
+            $(".panel-btn").on("click", function (){
+                $(".panel-btn").removeClass("active");
+                $(this).addClass("active");
+
+                var id = $(this).data("panel");
+                $.get(id+".html?v=0.2", function (data){
+                    $("#"+id+" .content-block").html(data);
+                    $.openPanel("#"+id);
+                    if(id == "panel-cat"){
+                        $("#panel-cat .content").css({"top": $("#panel-cat .bar").height()+"px"});
+                    }
+                });
+                
+            });
+
+            $(".cond-item").on("click", function (){
+                var cond = $(this).data("cond");
+                $(this).remove();
+                $("#searchForm").submit();
+            });
+            
+            $(".sort-item").on("click", function (){
+                var sort = $(this).data("sort");
+                $("#searchForm").submit();
+            });
+
+            // 加载flag
+            var loading = false;
+            // 最多可加载的条目
+            var maxItems = 100;
+
+            // 每次加载添加多少条目
+            var itemsPerLoad = 20;
+
+            // 上次加载的序号
+            var lastIndex = 20;
+
+            // 注册'infinite'事件处理函数
+            $(document).on('infinite', '.infinite-scroll',function() {
+
+                // 如果正在加载，则退出
+                if (loading) return;
+
+                // 设置flag
+                loading = true;
+
+                $.get("products_ajax.html", function (data){
+                    loading = false;
+                    if(lastIndex >= maxItems) {
+                      // 加载完毕，则注销无限加载事件，以防不必要的加载
+                      $.detachInfiniteScroll($('.infinite-scroll'));
+                      // 删除加载提示符
+                      $('.infinite-scroll-preloader').remove();
+                      return;
+                  }
+
+                    // 添加新条目
+                    $('.infinite-scroll .product-list').append(data);
+                    $(".num-box").numStep();
+                  // 更新最后加载的序号
+                  lastIndex = $('.product-item').length;
+                });
+            });
+        });
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group reg">
+        <div class="page page-current">
+        <form action="" id="baseForm">
+            <header class="bar bar-nav title-bar">
+                <h1 class="title">用户注册</h1>
+            </header>
+            <div class="content">        
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">手机号码</div>
+                                <div class="item-after"><input type="tel" value="" required placeholder="使用正确的手机号"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">验证码</div>
+                              <div class="item-after"><input type="text" placeholder="请输入6位验证码"></div>
+                            </div>
+                            <div class="phone-code enable">获取验证码</div>
+                        </li>    
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">网点名称</div>
+                              <div class="item-after"><input type="text" placeholder="请填写企业营业执照睥注册名称"></div>
+                            </div>
+                        </li>    
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">用户账号</div>
+                              <div class="item-after"><input type="text" placeholder="请输入6-18位的账号"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">登录密码</div>
+                              <div class="item-after"><input type="text" placeholder="不能小于6位"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">确认密码</div>
+                              <div class="item-after"><input type="text" placeholder="请再次输入密码"></div>
+                            </div>
+                        </li>
+                        <li class="item-content item-link">
+                            <div class="item-inner">
+                              <div class="item-title">用户地址</div>
+                              <div class="item-after">
+                                <input type="text" value="北京 海淀区 东北旺乡" id="city-picker">
+                                <input type="hidden" value="CN-11" id="province">
+                                <input type="hidden" value="CN-11-BJ-HT" id="city">
+                                <input type="hidden" value="CN-11-BJ-HT-DBW" id="district">
+                              </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">详细地址：</div>
+                              <div class="item-after"><input type="text" value=""></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>  
+                <div class="wrap-block">
+                    <div class="file-info">
+                        <div class="file-block">
+                            <div class="file-label">组织机构代码证</div>
+                            <div class="file">上传<input type="file"/></div>
+                        </div>
+                        <div class="showFileName"></div>
+                        <div class="errorTip"></div>
+                    </div>
+                    <div class="file-info">
+                        <div class="file-block">
+                            <div class="file-label">营业执照副本扫描件</div>
+                            <div class="file">上传<input type="file"/></div>
+                        </div>
+                        <div class="showFileName"></div>
+                        <div class="errorTip"></div>
+                    </div>
+                    <div class="file-info">
+                        <div class="file-block">
+                            <div class="file-label">税务登记证</div>
+                            <div class="file">上传<input type="file"/></div>
+                        </div>
+                        <div class="showFileName"></div>
+                        <div class="errorTip"></div>
+                    </div>
+                    <div class="file-info">
+                        <div class="file-block">
+                            <div class="file-label">法人身份证</div>
+                            <div class="file">上传<input type="file"/></div>
+                        </div>
+                        <div class="showFileName"></div>
+                        <div class="errorTip"></div>
+                    </div>
+                </div>
+                <div class="submit-btn">提交</div>
+            </div>
+        </form>
+        </div>  
+    </div>
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script> 
+        <script type="text/javascript" src="js/sm.min.js"></script>
+        <script type="text/javascript" src="js/city-picker.min.js"></script>   
+        <script type="text/javascript">
+        var countdown=60; 
+        function setTime(val) { 
+            if (countdown == 0) { 
+                val.on("click", sendCode).addClass("enable");
+                val.text("获取验证码"); 
+                countdown = 60; 
+            } else { 
+                val.off("click").removeClass("enable"); 
+                val.text("重新发送(" + countdown + ")"); 
+                countdown--; 
+                setTimeout(function() { 
+                    setTime(val);
+                },1000);
+            } 
+        }
+        function sendCode() {
+            setTime($(".phone-code"));
+        }
+            $(function (){
+                $("#city-picker").cityPicker({
+                    toolbarTemplate: '<header class="bar bar-nav">\
+                    <button class="button button-link pull-right close-picker">确定</button>\
+                    <h1 class="title">所在地区</h1>\
+                    </header>',
+                    province: $("#province"),
+                    city: $("#city"),
+                    district: $("#district")
+                });
+
+                $(".file").on("change","input[type='file']",function(){
+                    var filePath=$(this).val();
+                    var arr=filePath.split('\\');
+                    var fileName=arr[arr.length-1];
+                    var ext = arr[1];
+
+                    if(filePath.toLowerCase().indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1){
+                        $(this).parents(".file-block").siblings(".errorTip").html("").hide();
+                        var arr=filePath.split('\\');
+                        var fileName=arr[arr.length-1];
+                        $(this).parents(".file-block").siblings(".showFileName").html(fileName);
+                    }else{
+                        $(this).parents(".file-block").siblings(".showFileName").html("");
+                        $(this).parents(".file-block").siblings(".errorTip").html("您未上传文件，或者您上传文件类型有误！").show();
+                        return false;
+                    }
+                });
+
+                $(".phone-code").on("click", function (){
+                    sendCode();
+                });
+            });
+
+        </script>     
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script type="text/javascript">
+            $.noConflict();
+            jQuery("#baseForm").validate();
+        </script>
+       
+   
+</body>
+</html>

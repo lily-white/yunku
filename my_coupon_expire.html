@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group my-coupon">
+        <div class="page page-current">
+            <header class="bar bar-nav">
+              <a class="icon pull-left">&lt;</a>
+              <h1 class="title">订单详情</h1>
+            </header>
+            <div class="buttons-tab">
+                <a href="#" class="button external">未使用 <span class="count">（1）</span></a>
+                <a href="my_coupon_used.html" class="button external active">已使用<span class="count">（10）</span></a>
+                <a href="my_coupon_used.html" class="button external">已过期<span class="count">（10）</span></a>
+            </div>
+            <div class="tabs">
+                <div class="tab active" id="tab1">
+                    <div class="content infinite-scroll expire">
+                        <div class="coupon-list">
+                            <div class="coupon-item">
+                                <div class="coupon-content">
+                                    <div class="coupon-name">
+                                        <h6>代金券·云库直营店</h6>
+                                        <div class="coupon-date">2016-11-24至2017-11-24有效</div>
+                                    </div>
+                                    <div class="coupon-rules">使用限制：除机油类</div>
+                                    <div class="circle-top"></div>
+                                    <div class="circle-bottom"></div>
+                                    <div class="right-border"></div>
+                                    <div class="coupon-status"></div>
+                                </div>
+                                <div class="price-block">
+                                    <div class="item-price"><span class="unit">￥</span><span class="price">30</span></div>
+                                    <div class="coupon-no">券号：1100</div>
+                                </div>
+                            </div>
+                            <div class="coupon-item">
+                                <div class="coupon-content">
+                                    <div class="coupon-name">
+                                        <h6>代金券·云库直营店</h6>
+                                        <div class="coupon-date">2016-11-24至2017-11-24有效</div>
+                                    </div>
+                                    <div class="coupon-rules">使用限制：除机油类</div>
+                                    <div class="circle-top"></div>
+                                    <div class="circle-bottom"></div>
+                                    <div class="right-border"></div>
+                                    <div class="coupon-status"></div>
+                                </div>
+                                <div class="price-block">
+                                    <div class="item-price"><span class="unit">￥</span><span class="price">30</span></div>
+                                    <div class="coupon-no">券号：1100</div>
+                                </div>
+                            </div>
+                            <div class="coupon-item">
+                                <div class="coupon-content">
+                                    <div class="coupon-name">
+                                        <h6>代金券·云库直营店</h6>
+                                        <div class="coupon-date">2016-11-24至2017-11-24有效</div>
+                                    </div>
+                                    <div class="coupon-rules">使用限制：除机油类</div>
+                                    <div class="circle-top"></div>
+                                    <div class="circle-bottom"></div>
+                                    <div class="right-border"></div>
+                                    <div class="coupon-status"></div>
+                                </div>
+                                <div class="price-block">
+                                    <div class="item-price"><span class="unit">￥</span><span class="price">30</span></div>
+                                    <div class="coupon-no">券号：1100</div>
+                                </div>
+                            </div>
+                            <div class="coupon-item">
+                                <div class="coupon-content">
+                                    <div class="coupon-name">
+                                        <h6>代金券·云库直营店</h6>
+                                        <div class="coupon-date">2016-11-24至2017-11-24有效</div>
+                                    </div>
+                                    <div class="coupon-rules">使用限制：除机油类</div>
+                                    <div class="circle-top"></div>
+                                    <div class="circle-bottom"></div>
+                                    <div class="right-border"></div>
+                                    <div class="coupon-status"></div>
+                                </div>
+                                <div class="price-block">
+                                    <div class="item-price"><span class="unit">￥</span><span class="price">30</span></div>
+                                    <div class="coupon-no">券号：1100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infinite-scroll-preloader">
+                          <div class="preloader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/sm.min.js"></script>
+    <script type="text/javascript">
+        $.init();
+        $(function (){
+            // 加载flag
+            var loading = false;
+            // 最多可加载的条目
+            var maxItems = 100;
+
+            // 每次加载添加多少条目
+            var itemsPerLoad = 20;
+
+            // 上次加载的序号
+            var lastIndex = 20;
+
+            // 注册'infinite'事件处理函数
+            $(document).on('infinite', '.infinite-scroll',function() {
+
+                // 如果正在加载，则退出
+                if (loading) return;
+
+                // 设置flag
+                loading = true;
+
+                $.get("products_ajax.html", function (data){
+                    loading = false;
+                    if(lastIndex >= maxItems) {
+                      // 加载完毕，则注销无限加载事件，以防不必要的加载
+                      $.detachInfiniteScroll($('.infinite-scroll'));
+                      // 删除加载提示符
+                      $('.infinite-scroll-preloader').remove();
+                      return;
+                  }
+
+                    // 添加新条目
+                    $('.infinite-scroll .coupon-list').append(data);
+                  // 更新最后加载的序号
+                  lastIndex = $('.coupon-item').length;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group om">
+        <div class="page page-current ri">
+            <header class="bar bar-nav">
+              <a class="icon pull-left">&lt;</a>
+              <h1 class="title">退款申请</h1>
+            </header>
+            <div class="content infinite-scroll">
+                <form action="" id="orderForm">
+                <div class="search-block">
+                    <div class="sort-block">
+                        <div class="sort-item">
+                            <input type="text" placeholder="开始时间" id="start-date-picker" readonly class="sort-name"/>
+                            <div class="icon-sort"></div>
+                        </div>
+                        <div class="sort-item">
+                            <input type="text" placeholder="结束时间" id="end-date-picker" readonly class="sort-name"/>
+                            <div class="icon-sort"></div>
+                        </div>
+                        <div class="sort-item">
+                            <input type="text" placeholder="申请状态" id="status-picker" readonly class="sort-name" />
+                            <div class="icon-sort"></div>
+                        </div>
+                    </div>
+                    <input type="submit" value="搜索" class="search-btn"></input>
+                </div>
+                </form>
+                <div class="order-list">
+                    <div class="order-block">
+                        <div class="order-title">
+                            <div class="fact-name">惠保无锡直营店铺</div>                           
+                        </div>
+                        <div class="order-content">
+                            <div>
+                                <div class="order-no">DEV102170</div>
+                                <div class="order-price">
+                                    <div class="item-price"><span class="unit">￥</span><span class="price">98.00</span></div>
+                                    <div class="item-price">(<span class="unit">￥</span><span class="price">98.00</span>)</div>
+                                </div>
+                            </div>
+                            <div class="order-status">已退款</div>
+                        </div>
+                        <div class="btn-block">
+                            <div class="order-date">订单日期：2016.11.26</div>
+                            <a href="#" class="button">查看订单</a>                          
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="infinite-scroll-preloader">
+                  <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/sm.min.js"></script>
+        <script type="text/javascript">
+            $.init();
+            $(function () {          
+                $("#start-date-picker").calendar({});
+                $("#end-date-picker").calendar({});
+
+                $("#status-picker").picker({
+                      toolbarTemplate: '<header class="bar bar-nav">\
+                      <button class="button button-link pull-right close-picker">确定</button>\
+                      <h1 class="title">申请状态</h1>\
+                      </header>',
+                      cols: [
+                        {
+                          textAlign: 'center',
+                          values: ['已退款', '处理中']
+                        }
+                      ]
+                    });
+                // 加载flag
+                var loading = false;
+                // 最多可加载的条目
+                var maxItems = 100;
+
+                // 每次加载添加多少条目
+                var itemsPerLoad = 20;
+
+                // 上次加载的序号
+                var lastIndex = 20;
+
+                // 注册'infinite'事件处理函数
+                $(document).on('infinite', '.infinite-scroll',function() {
+
+                    // 如果正在加载，则退出
+                    if (loading) return;
+
+                    // 设置flag
+                    loading = true;
+
+                    $.get("order_ajax.html", function (data){
+                        loading = false;
+                        if(lastIndex >= maxItems) {
+                          // 加载完毕，则注销无限加载事件，以防不必要的加载
+                          $.detachInfiniteScroll($('.infinite-scroll'));
+                          // 删除加载提示符
+                          $('.infinite-scroll-preloader').remove();
+                          return;
+                      }
+
+                        // 添加新条目
+                        $('.infinite-scroll .order-list').append(data);
+                      // 更新最后加载的序号
+                      lastIndex = $('.order-block').length;
+                    });
+                });
+            });
+        </script>
+    </div>
+    
+</body>
+</html>

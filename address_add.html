@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <META HTTP-EQUIV="imagetoolbar" CONTENT="no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>云库</title>
+    <link rel="stylesheet" type="text/css" href="css/sm.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+<body>
+    <div class="page-group am">
+        <div class="page page-current">
+            <form action="" id="addressForm">
+            <header class="bar bar-nav title-bar">
+                <a class="icon pull-left">&lt;</a>
+                <h1 class="title">添加新地址</h1>
+            </header>
+            <nav class="bar bar-tab bottom-bar">
+                <a class="tab-item external" href="#" id="submit-btn">
+                    保存
+                </a>
+            </nav>
+            <div class="content aa">   
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title">收货人：</div>
+                                <div class="item-after"><input type="text" value="边双"></div>
+                            </div>
+                        </li>   
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">所在地区：</div>
+                              <div class="item-after"><input type="text" value="北京 朝阳区" id="city-picker"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">详细地址：</div>
+                              <div class="item-after"><input type="text" value="测试网点地址"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">邮政编码：</div>
+                              <div class="item-after"><input type="tel" value="100000"></div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                              <div class="item-title">移动电话：</div>
+                              <div class="item-after"><input type="tel" value="13300008888"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="default-block">
+                    <div class="item-title label">设为默认</div>
+                    <div class="item-input">
+                      <label class="label-switch">
+                        <input type="checkbox">
+                        <div class="checkbox"></div>
+                      </label>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/sm.min.js"></script>
+        <script type="text/javascript" src="js/city-picker.min.js"></script>
+        <script type="text/javascript">
+            $(function (){
+                $("#city-picker").cityPicker({
+                    toolbarTemplate: '<header class="bar bar-nav">\
+                    <button class="button button-link pull-right close-picker">确定</button>\
+                    <h1 class="title">所在地区</h1>\
+                    </header>'
+                });
+                $("#submit-btn").on("click", function (){
+                    $("#addressForm").submit();
+                })
+            });
+        </script>
+    </div>
+</body>
+</html>
